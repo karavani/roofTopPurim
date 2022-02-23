@@ -52,11 +52,11 @@
     <img style="width:100%; height: auto;" src="./מסיבת פורים4.gif">
     <!-- The About Section -->
     <div dir="rtl" class="w3-center w3-padding-64 w3-white" id="about">
-      <h4 class="w3-center">אהלן אם הגעתם עד לפה, כנראה שאנחנו חברים טובים ;)</h4>
+      <h4 class="w3-center w3-padding-12">אהלן אם הגעתם עד לפה, כנראה שאנחנו חברים טובים ;)</h4>
       <h2 class="w3-center">אז מה עומד על הפרק?</h2>
       <div style="padding: 10px 64px">
         <p class="w3-center">השנה בזכות עדן, נוי, רועי ואמילי היקרים קיבלנו לוקיישן מטורף בגג בלב הרצליה.</p>
-        <p class="w3-center">אז בזמן שמסיבות אחרות תשלמו 300 ש"ח כניסה, אצלנו תשלמו רק 100 ש"ח עבור ערב של קרנבל מוזיקה
+        <p class="w3-center">אז בזמן שבמסיבות אחרות תשלמו 300 ש"ח כניסה, אצלנו תשלמו רק 100 ש"ח עבור ערב של קרנבל מוזיקה
           טובה, קהל יפה <span style="font-size: larger;">ואלכוהול חופשי!</span></p>
           <p class="w3-center">אז קדימה! למה אתם מחכים? המכירה נפתחת לשבוע אחד בלבד וכמות האנשים מוגבלת!</p>
         </div>
@@ -101,15 +101,14 @@
                 <p>המסיבה היא מסיבת גג ותלויה במזג האוויר, אם מזג האוויר לא יאפשר את קיומה בהתאם לתקנון יוחזר לרוכשים
                   החזר מלא</p>
                 <p>*הכניסה בתחפושות בלבד*</p>
-                <a href="https://www.bitpay.co.il/app/share-info?i=190213503613_19aNEsmB"><button
-                    class="w3-button w3-black w3-margin-bottom">Pay With Bit</button></a>
+               <button onclick="document.getElementById('ticketModal').style.display='block'" class="w3-button w3-black w3-margin-bottom">Pay With Bit</button>
               </div>
             </div>
           </div>
         </div>
-        <a href="https://www.bitpay.co.il/app/share-info?i=190213503613_19aNEsmB"><img
+        <img onclick="document.getElementById('ticketModal').style.display='block'" 
             src="https://upload.wikimedia.org/wikipedia/he/thumb/d/d6/Bit_logo.svg/1200px-Bit_logo.svg.png"
-            alt="New York" style="width:50%" class="w3-hover-opacity"></a>
+            alt="New York" style="width:50%" class="w3-hover-opacity">
 
         <!-- The Contact Section -->
         <div class="w3-container w3-content w3-padding-64" id="contact">
@@ -137,7 +136,26 @@
       <img
         src="https://www.google.com/maps/vt/data=qPtfuq_e0zMvfbtleU-XlszAtpubO1Z-3KjJLgg84vgAVzy9q_Z4NEdzm8g6E5uYUbSgiIkctOtxlut4DhRTbaFLI8oJZ_J92QJVvMOV4FTa8OqTorhe36liQ1x2gMy_3oE3q0yzNc4A6Pwl5lJWzGWkE9sQPkv_R5hD2YQr8Bg"
         class="w3-image w3-greyscale-min" style="width:100%">
-
+ <!-- Ticket Modal -->
+ <div id="ticketModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-teal w3-center w3-padding-32"> 
+      <span onclick="document.getElementById('ticketModal').style.display='none'" 
+     class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+      <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+    </header>
+    <div class="w3-container" dir="rtl" style="color: black;">
+      <p><label><i class="fa fa-shopping-cart"></i> Tickets, 100 ₪ per person</label></p>
+      <input class="w3-input w3-border" type="text" name="name" placeholder="שם ושם משפחה"><br>
+      <input class="w3-input w3-border" type="text" name="phone" placeholder="טלפון"><br>
+      <input class="w3-input w3-border" type="text" name="id" placeholder="תעודת זהות"><br>
+      <input class="w3-input w3-border" type="text" name="directby" placeholder="דרך מי הגעתם?">
+      <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" onclick="handleTicketPusrchase()">PAY <i class="fa fa-check"></i></button>
+      <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+      <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+    </div>
+  </div>
+</div>
       <!-- Footer -->
       <footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey w3-xlarge">
         <p class="w3-medium w3-wide">NOAM KARAVANI | בניית אתרים</p>
@@ -163,9 +181,7 @@
           }
         }
       </script>
-
+      <script src="./main.js"></script>
 </body>
 
 </html>
-
-<!-- <a href="https://www.bitpay.co.il/app/share-info?i=190213503613_19aNEsmB">pay with</a> -->
