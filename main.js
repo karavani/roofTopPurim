@@ -9,3 +9,4 @@ function handleTicketPusrchase(){
       window.location.href = `https://wa.me/972557290867?text=${text}`;
 
 }
+alert("אזלו הכרטיסים, תודה רבה!");
